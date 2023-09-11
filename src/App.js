@@ -1,7 +1,24 @@
-import "./styles.css";
-import logo from "./assets/font.png";
+import React, { useState, useRef } from 'react';
+import './styles.css';
+import logo from './assets/font.png';
+import sound from './assets/Avengers.mp3';
 
 export default function App() {
+  const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  function togglePlay() {
+    const audio = audioRef.current;
+
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
+
+    setIsPlaying(!isPlaying);
+  }
+
   return (
     <div className="Background">
       <form>
@@ -25,7 +42,11 @@ export default function App() {
         <button>
           Make Payment
         </button>
+        <button type="button" onClick={togglePlay}>
+          {isPlaying ? 'Pause Sound' : 'Play Sound'}
+        </button>
       </form>
+      <audio ref={audioRef} src={sound} />
     </div>
   );
 }
