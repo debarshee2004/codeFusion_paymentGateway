@@ -7,7 +7,7 @@
   font-family: 'Oswald', sans-serif;
 }
 
-body {
+.Background{
   background-image: url("./assets/bg_pxfuel.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,11 +26,12 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 100px;
+  padding: 40px 150px;
   border-radius: 16px;
 }
 
 button {
+  margin-top: 25px;
   padding: 10px 25px;
   border-radius: 15px;
   border: none;
@@ -40,8 +41,10 @@ button {
 }
 
 .input {
-  padding: 15px;
-  
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;  
 }
 
 label {
