@@ -7,14 +7,17 @@
   font-family: 'Oswald', sans-serif;
 }
 
-.Background {
-  height: 100vh;
+body {
   background-image: url("./assets/bg_pxfuel.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-attachment: fixed;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
 form {
@@ -28,8 +31,8 @@ form {
 }
 
 button {
-  padding: 10px 24px;
-  border-radius: 5px;
+  padding: 10px 25px;
+  border-radius: 15px;
   border: none;
   color: #D94203;
   background-color: #FEF698;
@@ -37,7 +40,8 @@ button {
 }
 
 .input {
-  padding: 5px;
+  padding: 15px;
+  
 }
 
 label {
