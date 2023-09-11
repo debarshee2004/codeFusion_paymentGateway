@@ -6,8 +6,6 @@
   box-sizing: border-box;
   font-family: 'Oswald', sans-serif;
 }
-
-.Background{
 .Background {
   background-image: url("./assets/bg_pxfuel.png");
   background-repeat: no-repeat;
